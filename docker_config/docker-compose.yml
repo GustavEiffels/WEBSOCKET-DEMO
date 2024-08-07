@@ -1,0 +1,11 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      # WINDOW
+      - C:\Users\SIUK\GIT_REPO\WEBSOCKET_DEMO\WEBSOCKET-DEMO\docker_config\redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf

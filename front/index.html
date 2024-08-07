@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Test</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./chat.css">
+    <link rel="stylesheet" href="./scroll.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="component chatroom close" id="chatroom_comp">
+            <div class="chatroom_header">
+                <div class="chatroom_header_element room_name">CHATROOM</div>
+                <div class="chatroom_header_element exit" id="chatroom_exit">EXIT</div>
+            </div>
+            <div class="chatroom_body" id="chatroom_body">
+            </div>
+            <div class="chatroom_sendmsg" id="chatroom_sendmsg">
+                <input id="setMsg" type="text" placeholder="MESSAGE">
+                <button id="msg_send"> send </button>
+            </div>
+        </div>
+
+        <div class="component" id="setComp">
+            <div>PORT NUMBER</div>
+            <input type="text" id="portNm" placeholder="Port Number">
+            <div>NAME</div>
+            <input type="text" id="userNm" placeholder="NAME">
+            <div>ROOMNM</div>
+            <input type="text" id="roomNm" placeholder="ROOM NUMBER">
+            <button id="port_send_btn"> send </button>
+        </div>    
+    
+        <div class="component close" id="msgComp">
+            <h2>YOUR INFORMATION</h2>
+            <div id="setNm"></div>
+            <div id="setRoomNm"></div>
+        </div>    
+
+    </div>
+
+    <script type="text/javascript" src="./index.js"></script>    
+    <script src="https://cdn.jsdelivr.net/sockjs/latest/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+</body>
+</html>

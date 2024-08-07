@@ -1,0 +1,132 @@
+.chatroom{
+    width: 50vw;    
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.component.chatroom.close{
+    display: none;
+}
+
+
+.chatroom_header{
+    width: 100%;
+    height: 3rem;
+    background-color: grey;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.chatroom_header_element{
+    padding: 0 1rem;
+}
+
+.room_name{
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.exit{
+    transition: all .35s;
+    cursor: pointer;
+}
+
+.exit:hover{
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+}
+
+
+/* chatting room body  */
+.chatroom_body{
+    width: 50vw;
+    height: 280px;
+    max-height: inherit;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    overflow-y: auto; /* 세로 스크롤 바 자동 생성 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+.nick{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+.user_chat{
+    display: flex;
+    flex-direction: column;
+}
+
+.user_message{
+    background-color: grey;
+    border-radius: 5px;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 1%;
+    padding: 1%;
+    color: white;
+    width: fit-content;
+    max-width: 30%;
+}
+
+
+.my_chat{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.my_message{
+    background-color: black;
+    border-radius: 5px;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 1%;
+    margin: 0 1%;
+    color: white;
+    width: fit-content;
+    max-width: 30%;
+}
+
+/* send message */
+.chatroom_sendmsg{
+    display: flex;
+    margin: 0 1rem;
+    width: 100%;    
+    height: 3rem;
+}
+
+
+.chatroom_sendmsg input{
+    width: inherit;
+    height: inherit;
+    box-shadow: 0;
+}
+
+.chatroom_sendmsg button{
+    border-radius: 2px;
+    height: inherit;
+    box-shadow: 0;
+    background-color: grey;
+    font-size: 1.25rem;
+    transition: all .35s;
+    cursor: pointer;
+}
+
+.chatroom_sendmsg button:hover{
+    color: white;
+    font-size: 1.5rem;
+}

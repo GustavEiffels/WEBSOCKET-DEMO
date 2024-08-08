@@ -13,12 +13,14 @@ spring:
     name: gateway
   cloud:
     gateway:
+      default-filters:
+        - name: GlobalFilterTest
+          args:
+            testString: Test
+            pre: true
+            post: true
       routes:
-        - id: first-service
-          uri: http://localhost:8081/
+        - id: group-chat
+          uri: lb://group-chat
           predicates:
-            - Path=/first-service/**
-        - id: second-service
-          uri: http://localhost:8082/
-          predicates:
-            - Path=/second-service/**
+            - Path=/group-chat/**
